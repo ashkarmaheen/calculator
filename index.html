@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style/style.css" type="text/css"/>
+</head>
+<body>
+
+    <div class="background">
+    <div class="calculator">
+        <input class="screen">
+
+        <div class="keybackgroundbox">
+         
+            <div class="keybackground">
+
+                <button class="key" onclick="tuch(1)">1</button>
+                <button class="key" onclick="tuch(2)">2</button>
+                <button class="key" onclick="tuch('+')">+</button>
+
+            </div>
+
+            <div class="keybackground">
+
+                <button class="key" onclick="tuch(3)">3</button>
+                <button class="key" onclick="tuch(4)">4</button>
+                <button class="key" onclick="tuch('-')">-</button>
+
+
+            </div>
+
+            <div class="keybackground">
+
+                <button class="key" onclick="tuch(5)">5</button>
+                <button class="key" onclick="tuch(6)">6</button>
+                <button class="key" onclick="tuch('*')">x</button>
+
+            </div>
+            
+            <div class="keybackground">
+
+                <button class="key" onclick="tuch(7)">7</button>
+                <button class="key" onclick="tuch(8)">8</button>
+                <button class="key" onclick="tuch('/')">/</button>
+
+            </div>
+
+            <div class="keybackground">
+
+                <button class="key" onclick="tuch(9)">9</button>
+                <button class="key" onclick="tuch(0)">0</button>
+                <button class="key" onclick="allclear()">A/C</button>
+
+
+            </div>
+
+            <div class="keybackground">
+
+                <button class="key" onclick=" tuch('.')">.</button>
+                <button class="key" onclick="back()">
+                    <img src="image/Group 37.png">
+                </button>
+                <button class="key" onclick="val()">=</button>
+ 
+            </div>
+
+        </div>
+    </div>
+   
+
+    </div>
+
+    <script>
+
+       function tuch(a){
+
+        document.querySelector(".screen").value+=a
+         
+       }
+
+       function val(){
+
+document.querySelector(".screen").value=eval(document.querySelector(".screen").value)}
+ 
+
+function allclear(){
+
+document.querySelector(".screen").value=""
+ 
+}
+
+function back(){
+
+document.querySelector(".screen").value=document.querySelector(".screen").value.slice(0,-1)
+ 
+}
+
+
+    </script>
+    
+</body>
+</html>
